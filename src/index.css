@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-gray-300 font-sans antialiased selection:bg-gold selection:text-black;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white font-semibold;
+  }
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gold/50 rounded-full hover:bg-gold transition-colors duration-300;
+}
