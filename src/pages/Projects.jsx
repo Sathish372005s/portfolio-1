@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Server, Smartphone, Database, Globe, Github, ShoppingCart } from 'lucide-react';
 import { RESUME_DATA } from '../data/resume';
+import AOS from 'aos';
 
 const Projects = () => {
+  useEffect(() => {
+    AOS.refresh();
+  }, []);
+
   return (
     <div className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-gold font-medium tracking-wide uppercase mb-2 text-sm">Portfolio</h2>
           <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tighter">Featured Projects</h1>
           <div className="w-24 h-1 bg-gold mx-auto mt-6"></div>
@@ -15,7 +20,7 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {RESUME_DATA.projects.map((project, index) => (
-            <div key={index} className="bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden flex flex-col hover:border-neutral-700 transition-colors duration-300">
+            <div key={index} className="bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden flex flex-col hover:border-neutral-700 transition-colors duration-300" data-aos="fade-up" data-aos-delay={`${index * 100}`}>
               
               <div className="h-48 overflow-hidden relative">
                 <div className="absolute inset-0 bg-neutral-800 flex items-center justify-center">

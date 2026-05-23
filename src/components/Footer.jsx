@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Code2 } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram, Code2 } from 'lucide-react';
 import { RESUME_DATA } from '../data/resume';
 
 const Footer = () => {
@@ -20,11 +20,13 @@ const Footer = () => {
               <a href={RESUME_DATA.contact.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold transition-colors">
                 <Linkedin size={20} />
               </a>
+              {RESUME_DATA.contact.instagram && (
+                <a href={RESUME_DATA.contact.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold transition-colors">
+                  <Instagram size={20} />
+                </a>
+              )}
               <a href={`mailto:${RESUME_DATA.contact.email}`} className="text-gray-400 hover:text-gold transition-colors">
                 <Mail size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-gold transition-colors">
-                <Code2 size={20} />
               </a>
             </div>
           </div>

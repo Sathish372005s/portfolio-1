@@ -7,6 +7,7 @@ export const RESUME_DATA = {
     location: "Madurai, India",
     linkedin: "https://www.linkedin.com/in/sathish-s-6945472a1/",
     github: "https://github.com/Sathish372005s",
+    instagram: "https://www.instagram.com/s.a.t.h.i.s.h_3_?igsh=MWd2aGI5YmxkMnMwbQ==",
     portfolio: "Portfolio",
     leetcode: "LeetCode"
   },
